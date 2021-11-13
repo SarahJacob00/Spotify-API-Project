@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Spotify Playlist</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/pg2.css') }}" />
+    </head>
+
+    <body>     
+        
+        <div class="box1">
+            
+            <center>
+                <img src="{{ image }}" alt="Song" style="width:300px;height:300px;"><br>
+                Song Name &nbsp;: &nbsp;{{song}}<br>
+                Artist Name&nbsp;:&nbsp;{{artist}}
+            </center>
+        </div>
+        <div class="box2"> 
+            <center>Is this the song you want to add?<br><br>
+
+            <form action = "http://localhost:5000/page2a" method = "post">
+            <input type="submit" name=btn value="Yes">&nbsp;&nbsp;
+            <input type="submit" name=btn value="No"></center>
+            </form>
+        </div>
+        
+    </body>
+    
+</html>

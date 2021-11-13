@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Spotify Playlist</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/pg1.css') }}" />
+        <script>
+            function removeRequired(form)
+            {
+                $.each(form, function(key, value) 
+                {
+                    if ( value.hasAttribute("required")){
+                        value.removeAttribute("required");
+                    }
+                });
+            }
+            ("#ncomp").onclick=function() 
+            {
+                ("[required]").removeAttr("required");
+                
+            }
+        </script>
+    </head>
+    
+    <body>     
+        <form action = "http://localhost:5000/page1" method = "post">
+        <div class="box">
+            <center>
+            {% if value==1 %}
+            Song added successfully!
+            {% elif value==2 %}
+            Please type the details again
+            {% elif value==3 %}
+            Song not found. Please enter again.
+            {% elif value==4 %}
+            No Songs added to create playlist. Add songs.
+            {% endif %}
+            <h2>Enter the details of the song you want to add to the playlist:</h2>
+                Song Name:&nbsp;&nbsp;&nbsp;<input type = "text" name = "song" /><br><br>
+                Artist Name:&nbsp;&nbsp;&nbsp;<input type = "text" name = "artist" /><br><br>
+            <input type="submit" name="done" value="Add">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" id="ncomp" name="done" value="Done. Create Playlist!" onClick="removeRequired(this.form)"></center>
+        </div>
+        </form>
+    </body>
+    
+</html>

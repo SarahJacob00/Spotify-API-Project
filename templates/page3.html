@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Spotify Playlist</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/pg3.css') }}" />
+    </head>
+
+    <body>     
+        <div class="box">
+            {% if value==1 %}
+            
+                <center><h2>Playlist Created!</h2>
+                    
+                    Want to check out your new playlist?<br><br>
+                    <form action = "http://localhost:5000/page3" method = "post">
+                    <input type="submit" value="Redirect to Spotify"><br>
+                    </form>
+                    <br>
+                    Done?<br><br>
+                    <form action = "http://localhost:5000/routee" method = "post">
+                    <input type="submit" value="See you next time!">
+                    </form>
+                </center>
+            
+            {% elif value==0 %}
+            <form action = "http://localhost:5000/routee" method = "post">
+            <center><h2>Something went wrong...</h2>
+                    
+                Want to try again?<br><br>
+                <input type="submit" value="Redirect to Home page"><br>
+            </center>
+             </form>
+            {% endif %}
+        </div>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,53 @@
+
+.box{
+    border-radius: 5px;
+    width:500px;
+    background:rgba(0, 0, 0, 0.8);               
+    margin-top: 10px;
+    padding:30px 30px;
+    top: 20%;
+    left: 6%;
+    
+    position: absolute;
+}
+
+h1{
+    font-weight: normal;
+    margin: 0px ;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+
+
+body
+{
+    background: url("Spo_img6_cut.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #f3f3dd;
+    font-family: Helvetica;
+}
+input[type='submit']{
+    padding: 1rem 2rem;
+    border: 3px solid #f3f3dd;
+    border-radius: 7px;
+    color: #f3f3dd;
+    background: rgba(1, 8, 15, 0.6);
+    font-size: 1rem;
+    font-family: candara;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  input[type="text"]
+  {
+      border: none;
+      border-bottom: 2px solid #f3f3dd;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      font-family: candara;
+      font-size: 16px;                     
+      color:#f3f3dd; 
+      width:300px;              
+  }
